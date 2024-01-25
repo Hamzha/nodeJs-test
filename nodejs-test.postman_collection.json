@@ -1,0 +1,299 @@
+{
+	"info": {
+		"_postman_id": "4b7bc9b5-fdf0-4f78-88b0-5d79c69e9751",
+		"name": "nodejs-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6995101",
+		"_collection_link": "https://crimson-comet-691199.postman.co/workspace/New-Team-Workspace~ae662d63-620b-458c-80f6-49a24041dc41/collection/6995101-4b7bc9b5-fdf0-4f78-88b0-5d79c69e9751?action=share&source=collection_link&creator=6995101"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"asdasd\",\r\n    \"username\": \"a1sdsssadss2aassdf\",\r\n    \"email\": \"as12fdsdsssssdfa@asdf.com\",\r\n    \"password\": \"123123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/user/register",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getuser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWFmZjU3NTM1ZTQxOWQyOTlmZDI3NWMiLCJlbWFpbCI6ImFzMTJmZHNzc3Nzc2RmYUBhc2RmLmNvbSIsIm5hbWUiOiJhc2Rhc2QiLCJpYXQiOjE3MDYwODIwMTksImV4cCI6MTcwNjE2ODQxOX0.o7H7wY0NzAFiP5W5Qomalft-eAxC5Haziws4KpwufFc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"asdasd\",\r\n    \"username\": \"a1sdsssadss2aassdf\",\r\n    \"email\": \"as12fdsdsssssdfa@asdf.com\",\r\n    \"password\": \"123123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/user",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/user/login?email=as12fdsdsssssdfa@asdf.com&password=123123",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "as12fdsdsssssdfa@asdf.com"
+						},
+						{
+							"key": "password",
+							"value": "123123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWFmZjU3NTM1ZTQxOWQyOTlmZDI3NWMiLCJlbWFpbCI6ImFzMTJmZHNzc3Nzc2RmYUBhc2RmLmNvbSIsIm5hbWUiOiJhc2Rhc2QiLCJpYXQiOjE3MDYwODIwMTksImV4cCI6MTcwNjE2ODQxOX0.o7H7wY0NzAFiP5W5Qomalft-eAxC5Haziws4KpwufFc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"oldPassword\": \"asdfasdf\",\r\n    \"newPassword\": \"asdfasdf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/user/update-password",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"update-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWFmZjU3NTM1ZTQxOWQyOTlmZDI3NWMiLCJlbWFpbCI6ImFzMTJmZHNzc3Nzc2RmYUBhc2RmLmNvbSIsIm5hbWUiOiJhc2Rhc2QiLCJpYXQiOjE3MDYwODIwMTksImV4cCI6MTcwNjE2ODQxOX0.o7H7wY0NzAFiP5W5Qomalft-eAxC5Haziws4KpwufFc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"1asdf23\",\r\n    \"username\": \"asdasd\",\r\n    \"email\": \"12s3@asdf.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/user/update-user",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"update-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read file",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWFmZjU3NTM1ZTQxOWQyOTlmZDI3NWMiLCJlbWFpbCI6ImFzMTJmZHNzc3Nzc2RmYUBhc2RmLmNvbSIsIm5hbWUiOiJhc2Rhc2QiLCJpYXQiOjE3MDYwODIwMTksImV4cCI6MTcwNjE2ODQxOX0.o7H7wY0NzAFiP5W5Qomalft-eAxC5Haziws4KpwufFc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"path\": \"src\\\\dummyFolder\",\r\n    \"extension\": \".js\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/tasks/read-file",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"tasks",
+						"read-file"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "download-content-async",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWFmZjU3NTM1ZTQxOWQyOTlmZDI3NWMiLCJlbWFpbCI6ImFzMTJmZHNzc3Nzc2RmYUBhc2RmLmNvbSIsIm5hbWUiOiJhc2Rhc2QiLCJpYXQiOjE3MDYwODIwMTksImV4cCI6MTcwNjE2ODQxOX0.o7H7wY0NzAFiP5W5Qomalft-eAxC5Haziws4KpwufFc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"links\": [\r\n        \"https://storage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg\",\r\n        \"https://storage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpgs\",\r\n        \"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/tasks/download-files",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"tasks",
+						"download-files"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hit url",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWFmZjU3NTM1ZTQxOWQyOTlmZDI3NWMiLCJlbWFpbCI6ImFzMTJmZHNzc3Nzc2RmYUBhc2RmLmNvbSIsIm5hbWUiOiJhc2Rhc2QiLCJpYXQiOjE3MDYwODIwMTksImV4cCI6MTcwNjE2ODQxOX0.o7H7wY0NzAFiP5W5Qomalft-eAxC5Haziws4KpwufFc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"links\": [\r\n        \"https://storage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg\",\r\n        \"https://storage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpgs\",\r\n        \"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/tasks/download-files",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"tasks",
+						"download-files"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
